@@ -12,3 +12,7 @@ barplot(table(Game$Platform), xlab = "Genres", ylab = "Frequency", main = "Platf
 
 hist(Game$Global, xlab = "Game Sales Sold (in millions)", main = " Global Video Game Sales", col = "blue" , border = "yellow")
 # Makes a histogram demonstrating the global sales  
+
+Game_Sales_lt_8 <- subset(Game, Global < 8)
+hist(Game_Sales_lt_8$Global, xlab = "Game Sales Sold (in millions)", main = " Global Video Game Sales", col = "blue" , border = "yellow")
+#Makes a histogram demonstrating global sales that made less 8 million dollars in profit
