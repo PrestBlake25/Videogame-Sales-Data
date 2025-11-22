@@ -1,0 +1,8 @@
+library(readr)
+Game <- read_csv("Video Games Sales.csv")
+View(Game)
+global_sales_rev_model = lm(Review ~ Global, data = Game)
+summary(global_sales_rev_model)
+plot(Game$Review, resid(global_sales_rev_model), xlab = "Observed Values", ylab = "Residuals", main = "Observed vs Residuals")
+abline(h = 0, col = "orange", lty = 2)
+hist(resid(global_sales_rev_model), main = "Histogram of Residuals", xlab = "Residuals")
