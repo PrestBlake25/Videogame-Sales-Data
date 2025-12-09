@@ -49,4 +49,4 @@ The workflow follows standard data science practices:
 ## Repository Structure
  - vgsales.csv # Raw dataset
  - GameSalesCharts/ # Generated plots
- - Website: [Link]([url](https://sites.google.com/view/gamessales-25/home?authuser=0))
+ - Website: [Link](https://sites.google.com/view/gamessales-25/home?authuser=0)
