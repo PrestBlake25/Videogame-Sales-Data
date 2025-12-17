@@ -108,8 +108,9 @@ count_PS2_games <- table(PS2_games$Genre)
    - Use vectorized operations for better performance
 
 4. **Consider `ggplot2` for Plotting**
-   - More efficient for complex visualizations
-   - Better for batch generation of multiple plots
+   - Provides better control for complex, multi-layered visualizations
+   - Excellent for creating publication-ready graphics
+   - Superior for handling faceted plots and complex aesthetics
 
 5. **Add Output Suppression for Batch Runs**
    ```r

@@ -14,4 +14,4 @@ hist(Game$Global_Sales, xlab = "Game Sales Sold (in millions)", main = " Global 
 
 Game_Sales_lt_8 <- subset(Game, Global_Sales < 8)
 hist(Game_Sales_lt_8$Global_Sales, xlab = "Game Sales Sold (in millions)", main = " Global Video Game Sales", col = "blue" , border = "yellow")
-#Makes a histogram demonstrating global sales that made less 8 million dollars in profit
+#Makes a histogram demonstrating global sales less than 8 million units

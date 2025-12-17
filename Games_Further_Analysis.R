@@ -12,7 +12,7 @@ count_plat <- table(Game$Platform)
 Platform_GTS_100 <- subset(Game, Platform %in% names(count_plat[count_plat > 100]))
 table_plat_100 <- table(Platform_GTS_100$Platform)
 barplot(table_plat_100, xlab = "Console", ylab = "Titles", main = "Top Platforms for Gaming", col = "red", border = "yellow")
-# Creates a bar plot with the Top Platforms that have over 100 games 
+# Creates a bar plot with the Top Platforms that have over 100 titles 
 
 PS2_games = subset(Game, Platform == "PS2")
 count_PS2_games <- table(PS2_games$Genre)
