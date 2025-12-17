@@ -1,19 +1,18 @@
 library(readr)
-Game <- read_csv("Video Games Sales.csv")
-View(Game)
+Game <- read_csv("vgsales.csv")
 
-# Computing the 95% Confidence Interval of North America Column 
-mean(Game$`North America`)
-meanNorth = mean(Game$`North America`)
-sdNorth = sd(Game$`North America`)
-n = 1907
-error = sdNorth/sqrt(1907)
+# Computing the 95% Confidence Interval of NA_Sales Column 
+mean(Game$NA_Sales)
+meanNorth = mean(Game$NA_Sales)
+sdNorth = sd(Game$NA_Sales)
+n = nrow(Game)  # Use dynamic sample size instead of hardcoded value
+error = sdNorth/sqrt(n)
 lower_bound = meanNorth - (abs(qnorm(0.05/2)) * error)
 upper_bound = meanNorth + (abs(qnorm(0.05/2)) * error)
 
-# Computing the 95% Confidence Interval of Review Column
-meanReview = mean(Game$Review)
-sdReview = sd(Game$Review)
-error = sdReview/sqrt(n)
-lower_bound = meanReview - (abs(qnorm(0.05/2)) * error)
-upper_bound = meanReview + (abs(qnorm(0.05/2)) * error)
+# Computing the 95% Confidence Interval of Global_Sales Column
+meanGlobal = mean(Game$Global_Sales)
+sdGlobal = sd(Game$Global_Sales)
+error = sdGlobal/sqrt(n)
+lower_bound = meanGlobal - (abs(qnorm(0.05/2)) * error)
+upper_bound = meanGlobal + (abs(qnorm(0.05/2)) * error)
