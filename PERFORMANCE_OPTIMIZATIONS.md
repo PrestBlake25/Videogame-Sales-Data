@@ -6,7 +6,7 @@ This document details the performance improvements made to the R analysis script
 ## Optimizations Implemented
 
 ### 1. Removed Interactive `View()` Calls
-**Issue**: All 7 R scripts included `View(Game)` which opens an interactive data viewer.
+**Issue**: Six R scripts included `View(Game)` which opens an interactive data viewer.
 **Impact**: 
 - Prevents scripts from running in batch/automated mode
 - Adds unnecessary overhead in non-interactive environments
@@ -129,4 +129,3 @@ All modified scripts have been syntax-validated using R's parse() function.
 - `ConfidenceIntervals.R`
 - `CorrelationData.R`
 - `LinearRegression.R`
-- `MAT327HypothesisTestPro.R` (N/A - no changes needed)
